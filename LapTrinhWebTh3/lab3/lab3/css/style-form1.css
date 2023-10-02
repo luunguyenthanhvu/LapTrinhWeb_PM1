@@ -86,5 +86,10 @@ input,select, textarea {
   color: #ffffff;
   fill: #ffffff;
 }
+.submit_form .btn_submit:hover {
+  background-color: #ffffff;
+  color: #000000;
+  fill: #000000;
+}
 
 
