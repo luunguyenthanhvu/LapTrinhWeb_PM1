@@ -15,6 +15,7 @@
     cursor: pointer;
     width: 30px ;
     height: 30px;
+    /*position: fixed;*/
   }
 
 </style>
@@ -22,20 +23,22 @@
   <div class="container">
 
   </div>
+
 </body>
 <script>
   for(let i = 1; i <= 64; i++) {
     const button = document.createElement("button");
     button.innerText = i;
     button.classList.add("button");
-    button.addEventListener("click",() => countClick(i));
+    button.addEventListener("click",(event) => countClick(event,i));
     document.querySelector(".container").appendChild(button);
   }
   var count = 1;
-  function countClick(i) {
+  function countClick(event,i) {
     if(count == i) {
       count++;
-      document.querySelector(".container").removeChild(event.target);
+      // document.querySelector(".button").target.style.display = "hidden";
+      event.target.style.visibility = "hidden";
     } else {
       alert("Wrong button");
     }
