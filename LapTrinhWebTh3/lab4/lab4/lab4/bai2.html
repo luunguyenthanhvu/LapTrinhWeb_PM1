@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="container">
+  <form action="" method="post">
+    <label for="a">Nhap vao a: </label>
+    <input id="a" type="text">
+    <br><br>
+    <label for="b">Nhap vao b: </label>
+    <input id="b" type="text">
+    <br><br>
+    <label for="c">Nhap vao c: </label>
+    <input id="c" type="text">
+    <br><br>
+    <button onclick="giaiPhuongTrinh(event)">Ket qua</button>
+    <p id="ketQua"></p>
+  </form>
+
+</div>
+</body>
+<script>
+  function giaiPhuongTrinh(event) {
+    event.preventDefault();
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    var c = document.getElementById("c").value;
+    var ketQua = document.getElementById("ketQua");
+    var delta = b**2 - (4*a*c);
+    if(delta < 0) {
+      ketQua.innerHTML = "Phuong trinh vo nghiem. ";
+    } else if( delta == 0) {
+      ketQua.innerHTML = "Phuong trinh co nghiem kep x1 = x2 = " + (-b/2*a);
+    } else {
+      ketQua.innerHTML = "Phuong trinh co 2 nghiem phan biet x1 = " + ((-b + Math.sqrt(delta))/2*a) +
+      "\n x2 = " + ((-b - Math.sqrt(delta))/2*a);
+    }
+  }
+</script>
+</html>

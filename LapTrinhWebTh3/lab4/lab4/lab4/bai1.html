@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  .container {
+    height: 100vh;
+  }
+  button {
+    cursor: pointer;
+    padding: 30px;
+  }
+  .container.red , .red{
+    background-color: red !important;
+  }
+  .container.blue , .blue {
+    background-color: blue!important;
+  }
+  .container.yellow , .yellow {
+    background-color: yellow!important;
+  }
+  .container.gray , .gray {
+    background-color: gray!important;
+  }
+  .container.purple , .purple {
+    background-color: purple!important;
+  }
+</style>
+<body>
+  <div class="container">
+    <button class="red">Red</button>
+    <button class="blue">Blue</button>
+    <button class="yellow">Yellow</button>
+    <button class="gray">Gray</button>
+    <button class="purple">Purple</button>
+  </div>
+</body>
+<script>
+  const container = document.querySelector(".container");
+  const btnRed = document.querySelector(".red");
+  const btnBlue = document.querySelector(".blue");
+  const btnYellow = document.querySelector(".yellow");
+  const btnGray = document.querySelector(".gray");
+  const btnPurple = document.querySelector(".purple");
+
+  function resetColor() {
+    container.classList.remove("red","blue","yellow","gray","purple");
+  }
+  btnRed.addEventListener("click", function () {
+    resetColor();
+    container.classList.add("red");
+  });
+
+  btnBlue.addEventListener("click", function () {
+    resetColor();
+    container.classList.add("blue");
+  });
+  btnYellow.addEventListener("click", function () {
+    resetColor();
+    container.classList.add("yellow");
+  });
+  btnGray.addEventListener("click", function () {
+    resetColor();
+    container.classList.add("gray");
+  });
+  btnPurple.addEventListener("click", function () {
+    resetColor();
+    container.classList.add("purple");
+  });
+</script>
+</html>

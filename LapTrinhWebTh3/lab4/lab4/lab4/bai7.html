@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  .container {
+    width: 400px;
+    justify-content: center;
+    margin: auto;
+  }
+  .container button {
+    margin: 5px;
+    cursor: pointer;
+    width: 30px ;
+    height: 30px;
+  }
+
+</style>
+<body>
+  <div class="container">
+
+  </div>
+</body>
+<script>
+  for(let i = 1; i <= 64; i++) {
+    const button = document.createElement("button");
+    button.innerText = i;
+    button.classList.add("button");
+    button.addEventListener("click",() => countClick(i));
+    document.querySelector(".container").appendChild(button);
+  }
+  var count = 1;
+  function countClick(i) {
+    if(count == i) {
+      count++;
+      document.querySelector(".container").removeChild(event.target);
+    } else {
+      alert("Wrong button");
+    }
+  }
+</script>
+</html>

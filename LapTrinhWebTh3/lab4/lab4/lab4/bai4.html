@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  .container textarea{
+    width: 300px;
+    height: 100px;
+  }
+  .container input {
+    width: 300px;
+    height: 30px;
+  }
+  .container button {
+    padding: 10px;
+  }
+</style>
+<body>
+<div class="container">
+  <form action="">
+    <textarea id="textarea"></textarea>
+    <br> <br>
+    <input type="text" id="text_field">
+    <br> <br>
+    <button type="submit" id="submit">Submit</button>
+  </form>
+  <div id="result"></div>
+
+</div>
+</body>
+<script>
+  var submitBtn = document.getElementById("submit");
+  submitBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    var inputA = document.getElementById("textarea").value;
+    var inputB = document.getElementById("text_field").value;
+    var count = demSoLanXuatHien(inputA,inputB);
+    document.getElementById("result").textContent = "Số lần xuất hiện của B trong A là: " + count;
+
+  })
+
+  function  demSoLanXuatHien(text, paragraph) {
+    // biểu thức chính quy
+    var regex = new RegExp(paragraph,'g');
+    var matches = text.match(regex);
+    if(matches == null) {
+      return 0;
+    }
+    return  matches.length;
+  }
+</script>
+</html>

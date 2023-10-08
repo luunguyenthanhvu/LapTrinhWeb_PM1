@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  .container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .img {
+    transform-origin: center;
+  }
+
+</style>
+<body>
+<div class="container">
+  <div class="img">
+    <img id="image" src="../img/meme.jpg">
+  </div>
+</div>
+</body>
+<script>
+  var image = document.getElementById("image");
+  var rotationDegree = 0;
+  function rotateImage() {
+    rotationDegree += 15;
+    // css bằng js
+    // image.style.animation = "rotateImage 2s linear infinite";
+    image.style.transform = "rotate(" + rotationDegree + "deg)";
+  }
+  setInterval(rotateImage, 2000);
+</script>
+</html>
