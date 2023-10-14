@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: Tahoma,Arial,sans-serif;
+}
+.root{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to right, hsl(212.78deg 80.6% 73.73%), hsl(274.8deg 65.79% 70.2%));
+}
+.background_img{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 50%;
+  position: fixed;
+}
+.container {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.main__container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+.form__sign-in {
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.form__sign-in .header_form {
+  text-align: center;
+  padding: 40px 0 20px 0;
+}
+.form__sign-in .header_form h3 {
+  color: #583761;
+  font-size: 20px;
+}
+.form__sign-in .input__field {
+  padding: 10px 40px;
+
+}
+.form__sign-in .input__field input {
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  outline: none;
+}
+.form__sign-in .input__field input::placeholder{
+  color: #583761;
+  font-weight: bold;
+}
+.form__sign-in .input__field input:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.form__sign-in .btn__sign-in {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px ;
+}
+.form__sign-in .btn__sign-in button {
+  width: 100px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #BD59D7;
+  border: none;
+  color: #ffffff;
+  box-shadow: 5px 5px 10px #BD59D7;
+}
+.form__sign-in .other-login {
+  margin-top: 50px;
+  text-align: center;
+}
+.form__sign-in .other-login span {
+  opacity: 0.5;
+}
+.img-login {
+  width: 30px;
+  height: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+}
+.img-login:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+.other-login .login__icon {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.form__sign-in .sign__up {
+  text-align: center;
+  padding: 20px;
+}
+.form__sign-in .sign__up a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #583761;
+}
+
+.error {
+  color: red;
+  padding: 5px 20px;
+  display: none;
+}

@@ -1,0 +1,326 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="<c:url value="/static/css/style.css"/>">
+  <title>Account</title>
+</head>
+<body>
+<div class="container">
+  <div class="main__container">
+    <form action="">
+      <div class="user__account">
+        <div class="header__tag">
+          <h3>Account</h3>
+        </div>
+        <div class="input__field">
+          <div class="icon__input">
+            <label for="fullname">
+              <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 0 448 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                        d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+              </svg>
+            </label>
+          </div>
+          <div class="input__text">
+            <input id="fullname" type="text" placeholder="Full Name">
+          </div>
+        </div>
+        <p class="error" id="fullname_error"></p>
+
+        <div class="input__field">
+          <div class="icon__input">
+            <label for="email">
+              <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 0 512 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+              </svg>
+            </label>
+          </div>
+          <div class="input__text">
+            <input id="email" type="email" placeholder="Email Address">
+          </div>
+        </div>
+        <p class="error" id="email_error"></p>
+
+        <div class="input__field">
+          <div class="icon__input">
+            <label for="password">
+              <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 0 512 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                        d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/>
+              </svg>
+            </label>
+          </div>
+          <div class="input__text">
+            <input id="password" type="password" placeholder="Password">
+          </div>
+        </div>
+      </div>
+      <p class="error" id="password_error"></p>
+
+      <div class="user__info">
+        <div class="date_of_birth">
+          <div class="header__tag">
+            <h3>Date of Birth</h3>
+          </div>
+          <div class="input__field">
+            <input type="text" class="day" placeholder="DD">
+            <input type="text" class="month" placeholder="MM">
+            <input type="text" class="year" placeholder="YYYY">
+          </div>
+        </div>
+        <div class="gender">
+          <div class="header__tag">
+            <h3>Gender</h3>
+          </div>
+          <div class="gender__selection">
+            <div class="gender__select-male" id="male-selected">
+              <label for="male">Male</label>
+              <input type="radio" id="male" value="male" name="gender">
+            </div>
+            <div class="gender__select-female" id="female-selected">
+              <label for="female">Female</label>
+              <input type="radio" id="female" value="female" name="gender">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="payment__details">
+        <div class="header__tag">
+          <h3>Payment Details</h3>
+        </div>
+        <div class="select__payment">
+          <div class="payment__choices-cd selected" id="payment__by-creditCard">
+            <label for="credit_card">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                        d="M470.1 231.3s7.6 37.2 9.3 45H446c3.3-8.9 16-43.5 16-43.5-.2.3 3.3-9.1 5.3-14.9l2.8 13.4zM576 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM152.5 331.2L215.7 176h-42.5l-39.3 106-4.3-21.5-14-71.4c-2.3-9.9-9.4-12.7-18.2-13.1H32.7l-.7 3.1c15.8 4 29.9 9.8 42.2 17.1l35.8 135h42.5zm94.4.2L272.1 176h-40.2l-25.1 155.4h40.1zm139.9-50.8c.2-17.7-10.6-31.2-33.7-42.3-14.1-7.1-22.7-11.9-22.7-19.2.2-6.6 7.3-13.4 23.1-13.4 13.1-.3 22.7 2.8 29.9 5.9l3.6 1.7 5.5-33.6c-7.9-3.1-20.5-6.6-36-6.6-39.7 0-67.6 21.2-67.8 51.4-.3 22.3 20 34.7 35.2 42.2 15.5 7.6 20.8 12.6 20.8 19.3-.2 10.4-12.6 15.2-24.1 15.2-16 0-24.6-2.5-37.7-8.3l-5.3-2.5-5.6 34.9c9.4 4.3 26.8 8.1 44.8 8.3 42.2.1 69.7-20.8 70-53zM528 331.4L495.6 176h-31.1c-9.6 0-16.9 2.8-21 12.9l-59.7 142.5H426s6.9-19.2 8.4-23.3H486c1.2 5.5 4.8 23.3 4.8 23.3H528z"/>
+              </svg>
+              Credit Card
+            </label>
+            <input type="radio" class="payment__choice" id="credit_card" name="payment_selection">
+          </div>
+          <div class="payment__choices-pp" id="payment__by-paypal">
+            <label for="paypal">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                        d="M186.3 258.2c0 12.2-9.7 21.5-22 21.5-9.2 0-16-5.2-16-15 0-12.2 9.5-22 21.7-22 9.3 0 16.3 5.7 16.3 15.5zM80.5 209.7h-4.7c-1.5 0-3 1-3.2 2.7l-4.3 26.7 8.2-.3c11 0 19.5-1.5 21.5-14.2 2.3-13.4-6.2-14.9-17.5-14.9zm284 0H360c-1.8 0-3 1-3.2 2.7l-4.2 26.7 8-.3c13 0 22-3 22-18-.1-10.6-9.6-11.1-18.1-11.1zM576 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM128.3 215.4c0-21-16.2-28-34.7-28h-40c-2.5 0-5 2-5.2 4.7L32 294.2c-.3 2 1.2 4 3.2 4h19c2.7 0 5.2-2.9 5.5-5.7l4.5-26.6c1-7.2 13.2-4.7 18-4.7 28.6 0 46.1-17 46.1-45.8zm84.2 8.8h-19c-3.8 0-4 5.5-4.2 8.2-5.8-8.5-14.2-10-23.7-10-24.5 0-43.2 21.5-43.2 45.2 0 19.5 12.2 32.2 31.7 32.2 9 0 20.2-4.9 26.5-11.9-.5 1.5-1 4.7-1 6.2 0 2.3 1 4 3.2 4H200c2.7 0 5-2.9 5.5-5.7l10.2-64.3c.3-1.9-1.2-3.9-3.2-3.9zm40.5 97.9l63.7-92.6c.5-.5.5-1 .5-1.7 0-1.7-1.5-3.5-3.2-3.5h-19.2c-1.7 0-3.5 1-4.5 2.5l-26.5 39-11-37.5c-.8-2.2-3-4-5.5-4h-18.7c-1.7 0-3.2 1.8-3.2 3.5 0 1.2 19.5 56.8 21.2 62.1-2.7 3.8-20.5 28.6-20.5 31.6 0 1.8 1.5 3.2 3.2 3.2h19.2c1.8-.1 3.5-1.1 4.5-2.6zm159.3-106.7c0-21-16.2-28-34.7-28h-39.7c-2.7 0-5.2 2-5.5 4.7l-16.2 102c-.2 2 1.3 4 3.2 4h20.5c2 0 3.5-1.5 4-3.2l4.5-29c1-7.2 13.2-4.7 18-4.7 28.4 0 45.9-17 45.9-45.8zm84.2 8.8h-19c-3.8 0-4 5.5-4.3 8.2-5.5-8.5-14-10-23.7-10-24.5 0-43.2 21.5-43.2 45.2 0 19.5 12.2 32.2 31.7 32.2 9.3 0 20.5-4.9 26.5-11.9-.3 1.5-1 4.7-1 6.2 0 2.3 1 4 3.2 4H484c2.7 0 5-2.9 5.5-5.7l10.2-64.3c.3-1.9-1.2-3.9-3.2-3.9zm47.5-33.3c0-2-1.5-3.5-3.2-3.5h-18.5c-1.5 0-3 1.2-3.2 2.7l-16.2 104-.3.5c0 1.8 1.5 3.5 3.5 3.5h16.5c2.5 0 5-2.9 5.2-5.7L544 191.2v-.3zm-90 51.8c-12.2 0-21.7 9.7-21.7 22 0 9.7 7 15 16.2 15 12 0 21.7-9.2 21.7-21.5.1-9.8-6.9-15.5-16.2-15.5z"/>
+              </svg>
+              Paypal
+            </label>
+            <input type="radio" class="payment__choice" id="paypal" name="payment_selection">
+          </div>
+        </div>
+
+        <div class="payment__info">
+          <div class="input__field">
+            <div class="icon__input">
+              <label for="card_number">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                          d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"/>
+                </svg>
+              </label>
+            </div>
+            <div class="input__text">
+              <input id="card_number" type="text" placeholder="Card Number">
+            </div>
+          </div>
+          <p class="error" id="card_number_error"> </p>
+
+          <div class="card__info">
+            <div class="input__field">
+              <div class="icon__input">
+                <label for="card_cvc">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                            d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                  </svg>
+                </label>
+              </div>
+              <div class="input__text">
+                <input id="card_cvc" type="text" placeholder="Card CVC">
+              </div>
+            </div>
+
+            <div class="payment_date">
+              <select name="day month" id="payment_day-month">
+                <option value="1">01 Jan</option>
+                <option value="2">02 Jan</option>
+                <option value="3">03 Jan</option>
+              </select>
+              <select name="year" id="payment_year">
+                <option value="1">2015</option>
+                <option value="2">2015</option>
+                <option value="3">2015</option>
+              </select>
+            </div>
+          </div>
+          <p class="error" id="card_cvc_error"> </p>
+        </div>
+
+        <div class="conditions_terms">
+          <div class="header__tag">
+            <h3>Terms and Conditions</h3>
+          </div>
+          <div class="accept__condition">
+            <input type="checkbox">
+            <span>I accept the terms and conditions for signing up to this
+          service, and hereby confirm i have read the privacy policy.</span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+<script>
+  // action for gender
+  var maleLabel = document.querySelector("label[for='male']");
+  var femaleLabel = document.querySelector("label[for='female']");
+  var maleChoice = document.getElementById("male-selected");
+  var femaleChoice = document.getElementById("female-selected");
+
+  maleLabel.addEventListener("click", function () {
+    femaleChoice.classList.remove("selected");
+    maleChoice.classList.add("selected");
+  });
+  femaleLabel.addEventListener("click", function () {
+    femaleChoice.classList.add("selected");
+    maleChoice.classList.remove("selected");
+  });
+  // action for payment
+  var creditCardLabel = document.querySelector("label[for='credit_card']");
+  var paypalLabel = document.querySelector("label[for='paypal']");
+  var paymentChoiceCreditCard = document.getElementById("payment__by-creditCard");
+  var paymentChoicePayPal = document.getElementById("payment__by-paypal");
+
+
+  creditCardLabel.addEventListener("click", function() {
+    paymentChoiceCreditCard.classList.add("selected");
+    paymentChoicePayPal.classList.remove("selected");
+  });
+
+
+  paypalLabel.addEventListener("click", function() {
+    paymentChoiceCreditCard.classList.remove("selected");
+    paymentChoicePayPal.classList.add("selected");
+  });
+
+  // validation for form
+
+  // validate for full name
+  var fullnameInput = document.getElementById("fullname");
+  var fullnameError = document.getElementById("fullname_error");
+  function checkFullName() {
+    var fullname = fullnameInput.value;
+    if (fullname == null || fullname.length == 0) {
+      fullnameError.textContent = "Please fill in full name."
+      fullnameError.style.display = "block";
+      return false;
+    } else if (fullname.length < 6) {
+      fullnameError.textContent = "Full name must be at least 6 characters."
+      fullnameError.style.display = "block";
+      return false;
+    } else {
+      fullnameError.style.display = "none";
+      return true;
+    }
+  }
+
+  // validate for email
+  var emailInput = document.getElementById("email");
+  var emailError = document.getElementById("email_error");
+  function checkEmail() {
+    var email = emailInput.value;
+    if (email == null || email.length == 0) {
+      emailError.textContent = "Please fill in your email.";
+      emailError.style.display = "block";
+      return false;
+    } else {
+      var emailValid = "@gmail.com";
+      if (!email.includes(emailValid)) {
+        emailError.textContent = "Please fill in correct email type.";
+        emailError.style.display = "block";
+        return false;
+      } else {
+        emailError.style.display = "none";
+        return true;
+      }
+    }
+  }
+
+  // validate for needed services
+  var passwordInput = document.getElementById("password");
+  var passwordError = document.getElementById("password_error");
+  function  checkPass() {
+    var text = passwordInput.value;
+    var error = document.getElementById("password_error");
+    if(text.length == 0 || text == null) {
+      error.textContent = "Please fill in password";
+      error.style.display = "block";
+      return false;
+    } else {
+      error.style.display = "none";
+      return true;
+    }
+  }
+  function checkPassword() {
+    var email = passwordInput.value;
+    if (email == null || email.length == 0) {
+      passwordError.textContent = "Please fill in password";
+      passwordError.style.display = "block";
+      return false;
+    } else {
+      passwordError.style.display = "none";
+      return true;
+    }
+  }
+
+  var cardNumber = document.getElementById("card_number");
+  var cardNumberError = document.getElementById("card_number_error");
+  function checkCardNumber() {
+    var number = cardNumber.value;
+    if (isNaN(number)) {
+      cardNumberError.textContent = "Please fill in right card number (0-9)";
+      cardNumberError.style.display = "block";
+      return false;
+    } else {
+      cardNumberError.style.display = "none";
+      return true;
+    }
+  }
+
+  var cardCvc = document.getElementById("card_cvc");
+  var cardError = document.getElementById("card_cvc_error");
+  function checkCardCvc() {
+    var number = cardCvc.value;
+    if (isNaN(number)) {
+      cardError.textContent = "Please fill in right card cvc (0-9)";
+      cardError.style.display = "block";
+      return false;
+    } else {
+      cardError.style.display = "none";
+      return true;
+    }
+  }
+
+  fullnameInput.addEventListener("blur", checkFullName);
+  emailInput.addEventListener("blur", checkEmail);
+  passwordInput.addEventListener("blur",checkPassword);
+  cardNumber.addEventListener("blur", checkCardNumber);
+  cardCvc.addEventListener("blur", checkCardCvc);
+</script>
+</html>
+
