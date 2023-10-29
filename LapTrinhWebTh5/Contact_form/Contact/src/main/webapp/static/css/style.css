@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.font_bold {
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    height: 100%;
+    width: 600px;
+}
+
+.form__contact {
+    width: 600px;
+    border: 10px solid #E6E6E6;
+}
+
+.form__contact .header__form {
+    text-align: center;
+    padding: 30px;
+}
+
+.error {
+    padding: 10px 30px;
+    color: red;
+    display: none;
+}
+
+.flex__container {
+    display: flex;
+    margin: 10px 30px;
+    justify-content: space-between;
+}
+
+input, select, textarea {
+    border: none;
+    outline: none;
+}
+
+.form__contact .header__form h3 {
+    font-size: 30px;
+}
+
+.form__contact label {
+    font-weight: bold;
+}
+
+.form__contact .input__value {
+    background-color: #F7F7F7;
+    margin: 10px 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form__contact .input__value input, select {
+    background-color: #F7F7F7;
+    height: 30px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.form__contact .input__value textarea {
+    background-color: #F7F7F7;
+    height: 100px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.input_flex_two_child {
+    background-color: #F7F7F7;
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.input_flex_two_child input {
+    background-color: #F7F7F7;
+    height: 30px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.submit_form {
+    margin: 30px 30px 60px 30px;
+}
+
+.submit_form .btn_submit {
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #333333;
+    color: #ffffff;
+    fill: #ffffff;
+}
+
+.submit_form .btn_submit:hover {
+    background-color: #ffffff;
+    color: #000000;
+    fill: #000000;
+}
+
+
